@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: url(images/2019_WALLPAPERS_TAGLINE-1-1.jpg);
+        background-size: 100%;
+      }
+      .nav {
+        height: 70px;
+        background-color: #754d70;
+        box-shadow: 0px 1px 5px 1px black;
+      }
+      nav ul li {
+        float: right;
+        list-style: none;
+      }
+      a {
+        margin-right: 25px;
+        padding: 2px;
+        position: relative;
+        top: 30px;
+        font-size: 28px;
+        text-decoration: none;
+        color: #f1f1e6;
+        font-weight: bold;
+        font-family: "Viaoda Libre", cursive;
+      }
+
+      a:hover {
+        font-size: 22px;
+        color: black;
+        border-radius: 15px 15px 0px 0px;
+        transition: 220ms ease;
+        opacity: 0.8;
+      }
+      .content {
+        display: block;
+        float: left;
+        margin-right: 80px;
+        margin-left: 200px;
+        position: relative;
+        top: 520px;
+        margin-top: 50px;
+        padding: 15px;
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+        background-color: #006096;
+        box-shadow: 10px 10px 20px 0.5px black;
+        opacity: 0.3;
+      }
+      #text {
+        margin-left: 30%;
+      }
+
+      p {
+        color: khaki;
+        text-align: center;
+        position: relative;
+        top: 20px;
+        font-size: 20px;
+        font-family: "Viaoda Libre", cursive;
+      }
+      .content:hover {
+        border-radius: 15px 100px 15px 15px;
+        transition: 250ms ease;
+        opacity: 1;
+      }
+      .welcome {
+        color: lavender;
+        position: absolute;
+        margin-left: 31%;
+        top: 200px;
+        font-size: 70px;
+        font-family: "Viaoda Libre", cursive;
+      }
+      @media all and (max-width: 500px) {
+        .content {
+          position: relative;
+          margin-bottom: 50px;
+          margin-left: 15%;
+        }
+        .body {
+          background-image: url(images/2019_WALLPAPERS_TAGLINE-1-1.jpg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul id="list">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="wraper">
+      <h1 class="welcome">Welcome to my webpage</h1>
+      <div class="content">
+        <h1 id="text">Welcome</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla
+          ipsa suscipit temporibus quos, numquam fugiat voluptates totam
+          dignissimos voluptatibus quasi, hic necessitatibus quas culpa.
+        </p>
+      </div>
+      <div class="content">
+        <h1 id="text">Welcome</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla
+          ipsa suscipit temporibus quos, numquam fugiat voluptates totam
+          dignissimos voluptatibus quasi, hic necessitatibus quas culpa.
+        </p>
+      </div>
+      <div class="content">
+        <h1 id="text">Welcome</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla
+          ipsa suscipit temporibus quos, numquam fugiat voluptates totam
+          dignissimos voluptatibus quasi, hic necessitatibus quas culpa.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

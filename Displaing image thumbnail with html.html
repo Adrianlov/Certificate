@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="files" multiple /><br /><br />
+    <span id="list"></span>
+    <script>
+      document
+        .getElementById("files")
+        .addEventListener("change", fileSelect, false);
+      function fileSelect(evt) {
+        var upped = evt.target.files;
+        var output = "";
+
+        for (var i = 0; i <= upped.length; i++) {
+          files = upped[i];
+
+          if (files.type.substring(0, 5) != "image") {
+            alert("Not an image file!");
+            return;
+          } else {
+            var reader = new FileReader();
+            reader.onload = (function (makeThumb) {
+              return function (e) {
+                var span = document.createElement("span");
+                span.innerHTML = [
+                  '<img class = "thumb" src="',
+                  e.target.result,
+                  ' "title="',
+                  escape(makeThumb.name),
+                  '" />',
+                ].join("");
+                document.getElementById("list").insertBefore(span, null);
+              };
+            })(files);
+
+            reader.readAsDataURL(files);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

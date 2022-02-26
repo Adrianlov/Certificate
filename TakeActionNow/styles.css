@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 4, 1fr;
+  grid-template-rows: 100px;
+  grid-gap: 10px;
+  background-color: black;
+  grid-template-areas:
+    "banner banner banner banner"
+    "container-1 container-1 part8 part8"
+    "container-2 container-2 part8 part8"
+    "containerend containerend part8 part8"
+    ". . part8 part8"
+    "fotter fotter fotter fotter";
+}
+
+h1,
+p {
+  color: white;
+}
+
+.banner {
+  grid-area: banner;
+  background-color: #754d70;
+  color: white;
+  text-align: center;
+}
+
+.part7 {
+  background-color: #754d70;
+  height: 150px;
+  width: 250px;
+  text-align: center;
+}
+
+.container-1 {
+  grid-area: container-1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.part8 {
+  grid-area: part8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#ptext {
+  font-size: 20px;
+}
+
+#picture {
+  align-self: center;
+}
+
+.container-2 {
+  grid-area: container-2;
+}
+
+.box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#box1 {
+  height: 300px;
+  width: 300px;
+  background-color: #754d70;
+  margin-right: 20px;
+  margin-left: 15px;
+  border-radius: 20px;
+}
+
+#box2 {
+  height: 300px;
+  width: 300px;
+  background-color: #754d70;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+#box3 {
+  height: 300px;
+  width: 300px;
+  background-color: #754d70;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.containerend {
+  grid-area: containerend;
+  margin: 0 auto;
+}
+
+.part6 {
+  text-align: center;
+}
+
+.fotter {
+  grid-area: fotter;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+#links {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  align-self: center;
+}

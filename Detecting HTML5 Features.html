@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function doIt() {
+        var inputs = [
+          "search",
+          "number",
+          "range",
+          "color",
+          "tel",
+          "url",
+          "email",
+          "date",
+          "month",
+          "week",
+          "time",
+          "datetime",
+          "datetime-local",
+        ];
+        // create an input element
+        var imp = document.createElement("input");
+
+        for (i = 0; i < 13; i++) {
+          //set the attribute
+          imp.setAttribute("type", inputs[i]);
+
+          //text is returned if it's not supported
+          if (imp.type == "text") {
+            document.getElementById("output").innerHTML +=
+              "&lt;input type=" + inputs[i] + "&gt;: NO" + "<br>";
+          } else {
+            document.getElementById("output").innerHTML +=
+              "&lt;input type=" + inputs[i] + "&gt;: YES" + "<br>";
+          }
+        }
+      }
+    </script>
+    <style>
+      #types {
+        float: left;
+        padding-right: 10px;
+      }
+      #output {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="Go" onclick="doIt()">GO</button><br /><br />
+    <div id="types">
+      Search Boxes <br />
+      Spinboxes <br />
+      Slider <br />
+      Color Pikers <br />
+      Telephone numbers <br />
+      Web address <br />
+      Email address <br />
+      Calendar date pikers <br />
+      Months <br />
+      Weeks <br />
+      Timestamps <br />
+      Precise date+timestamps <br />
+      Local date and times <br />
+    </div>
+    <div id="output"></div>
+  </body>
+</html>
